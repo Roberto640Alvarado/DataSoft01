@@ -61,8 +61,6 @@ public class WebSecurityConfiguration {
 			.csrf().disable()
 			.authorizeRequests(auth -> auth
 				.requestMatchers("/user/**").permitAll()
-				.requestMatchers("/books/**").permitAll()
-				.requestMatchers("/generes/**").permitAll()
 				.anyRequest().authenticated()
 			)
 			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
